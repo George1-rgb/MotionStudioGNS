@@ -26,7 +26,6 @@ void UMSSettingsWidget::NativeOnInitialized()
 		AmbientVolume->OnValueChanged.AddDynamic(this, &UMSSettingsWidget::OnAmbientValueChanged);
 	}
 	UGameplayStatics::SetBaseSoundMix(GetWorld(), SoundMixVolume);
-
 	LoadSaves();
 }
 

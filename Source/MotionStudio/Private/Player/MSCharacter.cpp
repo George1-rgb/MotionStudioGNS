@@ -44,6 +44,7 @@ void AMSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAxis("LookUp", this, &AMSCharacter::AddControllerPitchInput);
 	PlayerInputComponent->BindAxis("TurnAround", this, &AMSCharacter::AddControllerYawInput);
 	PlayerInputComponent->BindAction("Action", IE_Pressed, this, &AMSCharacter::OnPressed);
+	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AMSCharacter::Jump);
 }
 
 void AMSCharacter::MoveForward(float Amount)
